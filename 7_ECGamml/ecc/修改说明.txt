@@ -1,0 +1,118 @@
+mirdef.h
+
+14行改为：
+//#define mr_dltype __int64   /* ... or long long for Unix/Linux */
+#define mr_dltype long long  /* ... or long long for Unix/Linux */
+
+
+miracl.h
+
+265行改为：
+//void select(_MIPT_ big x,int d,big y,big z);/* d is + or -,perform required add or subtract operation */
+void myselect(_MIPT_ big x,int d,big y,big z);/* d is + or -,perform required add or subtract operation */
+
+
+main.c
+
+21行改为：
+//void main()
+int main()
+
+ecsgen.c
+
+14行改为：
+//#include <process.h>
+
+110行改为：
+//_itoa(ep,tmp,10);
+sprintf(tmp,"%d",ep);
+
+ecsign.c
+
+44行改为：
+//select(_MIPP_ mr_mip->w1,PLUS,mr_mip->modulus,mr_mip->w1);
+myselect(_MIPP_ mr_mip->w1,PLUS,mr_mip->modulus,mr_mip->w1);
+
+189行改为：
+//select(_MIPP_ mr_mip->w0,PLUS,hash,mr_mip->w0);
+myselect(_MIPP_ mr_mip->w0,PLUS,hash,mr_mip->w0);
+
+mrcurve.c
+
+66行改为：
+//select(_MIPP_ p,MINUS,mr_mip->w1,mr_mip->w1);
+   myselect(_MIPP_ p,MINUS,mr_mip->w1,mr_mip->w1);
+
+232行改为：
+//select(_MIPP_ mr_mip->w3,PLUS,mr_mip->modulus,mr_mip->w3);
+myselect(_MIPP_ mr_mip->w3,PLUS,mr_mip->modulus,mr_mip->w3);
+
+mrarth0.c
+
+127行改为：
+//void select(_MIPD_ big x,int d,big y,big z)
+void myselect(_MIPD_ big x,int d,big y,big z)
+
+marath1.c
+
+330行改为：
+//select(_MIPP_ x,PLUS,mr_mip->w0,x);
+myselect(_MIPP_ x,PLUS,mr_mip->w0,x);
+
+mrio2.c
+
+48行改为：
+//select(_MIPP_ mr_mip->w6,PLUS,mr_mip->w5,mr_mip->w6);
+myselect(_MIPP_ mr_mip->w6,PLUS,mr_mip->w5,mr_mip->w6);
+
+mrmonty.c
+
+26行改为：
+//select(_MIPP_ y,PLUS,mr_mip->modulus,y);
+myselect(_MIPP_ y,PLUS,mr_mip->modulus,y);
+
+mrpower.c
+
+68行改为：
+//select(_MIPP_ mr_mip->w1,MINUS,mr_mip->w2,mr_mip->w1);
+myselect(_MIPP_ mr_mip->w1,MINUS,mr_mip->w2,mr_mip->w1);
+
+
+203行改为：
+//select(_MIPP_ mr_mip->modulus,PLUS,mr_mip->w0,mr_mip->w14);
+myselect(_MIPP_ mr_mip->modulus,PLUS,mr_mip->w0,mr_mip->w14);
+
+219行改为：
+//select(_MIPP_ mr_mip->modulus,MINUS,mr_mip->w0,mr_mip->w14);
+myselect(_MIPP_ mr_mip->modulus,MINUS,mr_mip->w0,mr_mip->w14);
+
+232行改为：
+//select(_MIPP_ mr_mip->w15,PLUS,mr_mip->modulus,mr_mip->w15);
+myselect(_MIPP_ mr_mip->w15,PLUS,mr_mip->modulus,mr_mip->w15);
+
+248行改为：
+//select(_MIPP_ mr_mip->modulus,MINUS,mr_mip->w0,mr_mip->w14);
+myselect(_MIPP_ mr_mip->modulus,MINUS,mr_mip->w0,mr_mip->w14);
+
+292行改为:
+//select(_MIPP_ mr_mip->w14,PLUS,mr_mip->w0,mr_mip->w14);
+myselect(_MIPP_ mr_mip->w14,PLUS,mr_mip->w0,mr_mip->w14);
+
+mrxgcd.c
+
+52行改为：
+//select(_MIPP_ mr_mip->w3,PLUS,mr_mip->w0,mr_mip->w3);
+myselect(_MIPP_ mr_mip->w3,PLUS,mr_mip->w0,mr_mip->w3);
+
+194行改为：
+//select(_MIPP_ y,MINUS,mr_mip->w3,mr_mip->w3);
+myselect(_MIPP_ y,MINUS,mr_mip->w3,mr_mip->w3);
+
+213行改为：
+//select(_MIPP_ mr_mip->w0,PLUS,mr_mip->w1,mr_mip->w0);
+myselect(_MIPP_ mr_mip->w0,PLUS,mr_mip->w1,mr_mip->w0);
+
+216行改为：
+//if (q!=mr_mip->w4) copy(mr_mip->w0,mr_mip->w4);
+if (q!=(int)mr_mip->w4) copy(mr_mip->w0,mr_mip->w4);
+

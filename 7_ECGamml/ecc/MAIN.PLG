@@ -1,0 +1,77 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: MAIN - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Build : warning : failed to (or don't know how to) build 'F:\myproject\ECGamml\MAINelgamal.C'
+
+Creating temporary file "C:\DOCUME~1\cxgao\LOCALS~1\Temp\RSP1F.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:console /incremental:yes /pdb:"Debug/MAIN.pdb" /debug /machine:I386 /out:"Debug/MAIN.exe" /pdbtype:sept 
+.\Debug\ECElGamal.obj
+.\Debug\Ecsgen.obj
+.\Debug\Ecsign.obj
+.\Debug\Ecsver.obj
+.\Debug\MAIN.OBJ
+.\Debug\MAINelgamal.obj
+.\Debug\MRARTH0.OBJ
+.\Debug\MRARTH1.OBJ
+.\Debug\MRARTH2.OBJ
+.\Debug\MRARTH3.OBJ
+.\Debug\MRCORE.OBJ
+.\Debug\MRCURVE.OBJ
+.\Debug\Mrio1.obj
+.\Debug\Mrio2.obj
+.\Debug\MRMONTY.OBJ
+.\Debug\MRMULDV.OBJ
+.\Debug\MRPOWER.OBJ
+.\Debug\MRSHS.OBJ
+.\Debug\MRSHS160.OBJ
+.\Debug\MRXGCD.OBJ
+]
+Creating command line "link.exe @C:\DOCUME~1\cxgao\LOCALS~1\Temp\RSP1F.tmp"
+<h3>Output Window</h3>
+Linking...
+MAINelgamal.obj : error LNK2005: _main already defined in MAIN.OBJ
+MRMULDV.OBJ : error LNK2005: _muldiv already defined in MRCORE.OBJ
+MRMULDV.OBJ : error LNK2005: _muldvm already defined in MRCORE.OBJ
+MRSHS160.OBJ : error LNK2005: _hashing already defined in MRSHS.OBJ
+Debug/MAIN.exe : fatal error LNK1169: one or more multiply defined symbols found
+Error executing link.exe.
+Creating temporary file "C:\DOCUME~1\cxgao\LOCALS~1\Temp\RSP21.tmp" with contents
+[
+/nologo /o"Debug/MAIN.bsc" 
+.\Debug\ECElGamal.sbr
+.\Debug\Ecsgen.sbr
+.\Debug\Ecsign.sbr
+.\Debug\Ecsver.sbr
+.\Debug\MAIN.SBR
+.\Debug\MAINelgamal.sbr
+.\Debug\MRARTH0.SBR
+.\Debug\MRARTH1.SBR
+.\Debug\MRARTH2.SBR
+.\Debug\MRARTH3.SBR
+.\Debug\MRCORE.SBR
+.\Debug\MRCURVE.SBR
+.\Debug\Mrio1.sbr
+.\Debug\Mrio2.sbr
+.\Debug\MRMONTY.SBR
+.\Debug\MRMULDV.SBR
+.\Debug\MRPOWER.SBR
+.\Debug\MRSHS.SBR
+.\Debug\MRSHS160.SBR
+.\Debug\MRXGCD.SBR]
+Creating command line "bscmake.exe @C:\DOCUME~1\cxgao\LOCALS~1\Temp\RSP21.tmp"
+Creating browse info file...
+<h3>Output Window</h3>
+
+
+
+<h3>Results</h3>
+MAIN.exe - 5 error(s), 1 warning(s)
+</pre>
+</body>
+</html>

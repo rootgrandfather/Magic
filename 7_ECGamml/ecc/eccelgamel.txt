@@ -1,0 +1,56 @@
+/*
+/*	Test EC-ElGamal encryption	*/
+
+void main()
+{
+	int res,i;
+	char *myPriKey,*myRand_data,*myHidden_data;	/*	private key	*/
+	char *myPubKey;	/* public key,two parts of cryptography	*/
+	MR_BYTE *message,*plain;	/* usually symmetric key	*/
+    clock_t start, finish;
+	double duration;
+
+
+/*	initial */
+	message=(MR_BYTE *)malloc(sizeof(MR_BYTE)*1024);
+//	paramstr=(char *)malloc(sizeof(char)*);
+
+	strcpy(message,"1FFFFFCCCCFFFFFFFFFFFFFFFFFFFFFF1111111111111111BBBBaaaaaaaaaa000001");
+	
+	plain=(MR_BYTE *)malloc(sizeof(MR_BYTE)*1024);
+	myPriKey=(char *)malloc(sizeof(char)*NUMBITS);
+	myHidden_data=(char *)malloc(sizeof(char)*NUMBITS);
+	myPubKey=(char *)malloc(sizeof(char)*NUMBITS);
+	myRand_data=(char *)malloc(sizeof(char)*NUMBITS);
+
+	res = ECC_GenKey(myPriKey,myPubKey);
+
+	printf("\nKey Generation:\n");
+	printf(" PriKey:%s\n",myPriKey);
+	printf(" PubKey:%s\n",myPubKey);
+
+	res = Send_Elgamal(myPubKey,message,myRand_data,myHidden_data);
+
+	printf("Encode:\n");
+	printf(" Message:%s\n",message);
+	printf(" RandDate:%s\n",myRand_data);
+	printf(" HiddenDate:%s\n",myHidden_data);
+
+	res = Receive_Elgamal(myPriKey,myRand_data,myHidden_data,plain);
+	
+	printf("Decode:\n");
+	printf(" HiddenDate:%s\n",myHidden_data);
+	printf(" RandDate:%s\n",myRand_data);
+	printf(" Message:%s\n",plain);
+
+	printf("over\n");
+
+	/*	despose all the variables	*/
+	free(myPubKey);
+	free(myRand_data);
+	free(myHidden_data);
+	free(myPriKey);
+	free(message);
+	free(plain);
+
+}

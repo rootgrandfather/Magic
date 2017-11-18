@@ -1,0 +1,59 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: rsa2 - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\isc03\LOCALS~1\Temp\RSP23D.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:console /incremental:yes /pdb:"Debug/rsa2.pdb" /debug /machine:I386 /out:"Debug/rsa2.exe" /pdbtype:sept 
+".\Debug\desc.obj"
+".\Debug\md2c.obj"
+".\Debug\md4c.obj"
+".\Debug\md5c.obj"
+".\Debug\nn.obj"
+".\Debug\prime.obj"
+".\Debug\r_dh.obj"
+".\Debug\r_encode.obj"
+".\Debug\r_enhanc.obj"
+".\Debug\r_keygen.obj"
+".\Debug\r_random.obj"
+".\Debug\r_stdlib.obj"
+".\Debug\redemo.obj"
+".\Debug\rsa.obj"
+".\Debug\shsc.obj"
+]
+Creating command line "link.exe @C:\DOCUME~1\isc03\LOCALS~1\Temp\RSP23D.tmp"
+<h3>Output Window</h3>
+Linking...
+Creating temporary file "C:\DOCUME~1\isc03\LOCALS~1\Temp\RSP23E.tmp" with contents
+[
+/nologo /o"Debug/rsa2.bsc" 
+".\Debug\desc.sbr"
+".\Debug\md2c.sbr"
+".\Debug\md4c.sbr"
+".\Debug\md5c.sbr"
+".\Debug\nn.sbr"
+".\Debug\prime.sbr"
+".\Debug\r_dh.sbr"
+".\Debug\r_encode.sbr"
+".\Debug\r_enhanc.sbr"
+".\Debug\r_keygen.sbr"
+".\Debug\r_random.sbr"
+".\Debug\r_stdlib.sbr"
+".\Debug\redemo.sbr"
+".\Debug\rsa.sbr"
+".\Debug\shsc.sbr"]
+Creating command line "bscmake.exe @C:\DOCUME~1\isc03\LOCALS~1\Temp\RSP23E.tmp"
+Creating browse info file...
+<h3>Output Window</h3>
+
+
+
+<h3>Results</h3>
+rsa2.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>
